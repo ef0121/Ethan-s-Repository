@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, intial-scale=l,
+	shrink-to-fit=no">
+		<title>Contact Us</title>
+		       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+			   integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+			   crossorigin="anonymous"> 
+		<link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+	
+		body{
+			background-color: navy;
+			color: white;
+			}
+		nav{
+			background-color: pink;
+			color: black;
+			}
+		a {
+			text-decoration: underline;
+			}
+		nav:visited {
+						text-decoration: underline;
+						color: navy;
+						}
+		nav:hover {	
+					text-decoration: underline;
+					font-weight: bold;
+					background-color: pink;
+					color: white 
+					}
+		nav:active {
+						text-decoration: none;
+						}
+		.nav-pills li {
+						margin-left: 10px;
+						background: navy;
+						}				
+		label {
+				font-weight: bold;
+				font-size:1.25em;
+				color: white;
+				}
+		div.form {
+				display: block;
+				text-align: center;
+				}
+		form {
+				display: inline-block;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: left;
+			}	
+			
+		
+		
+		</style>
+		<script type="text/JavaScript">
+		function validateform(){
+			
+		if(document.myForm.Name.value == "") {
+		alert("Name Invalid");
+		document.myForm.Name.focus();
+		return false; }
+		
+		if(document.myForm.Email.value == "") {
+		alert("Email Invalid");
+		document.myForm.Email.focus();
+		return false; }
+		
+		if(document.myForm.Phone.value == "") {
+		alert("Phone Invalid");
+		document.myForm.Phone.focus();
+		return false; }
+		
+		if(document.myForm.additionalInformation.value == ""){
+		alert("Additional Information Invalid");
+		document.myForm.additionalInformation.focus();
+		return false; }
+		
+		
+		
+		}
+		
+		
+		
+		</script>
+	
+	</head>
+
+	<body>
+		<main>
+			<header>
+				<h1><p>The Cheeky Pig</p></h1>
+			</header>
+				
+		<nav><!--this will contain links to the pages-->
+			<hr />
+			<ul class="nav nav-pills">
+			<li class="nav-item"><a class="nav-link" href="home.html"><i class="fa fa-home">Home</i></a></li>
+			<li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+			<li class="nav-item"><a class="nav-link active" href="contactUs.html">Contact Us</a></li>
+			</ul>
+			<hr />
+		</nav>
+		<div class="form">
+		<form action="contactUs.html" method="POST" onSubmit="return validateform()" name="myForm">
+			<label for="Name">Name:</label> <input type="text" name="Name"</>
+				<br />
+			<label for="Email">Email:</label> <input type="text" name="Email"</>
+				<br />
+			<label for="Phone">Phone:</label> <input type="text" name="Phone"</>
+				<br />
+			<label for="Inquiry">Reason for Inquiry:</label> <select name="Inquiry">
+									<option value="Catering">Catering</option>
+									<option value="Private Party">Private Party</option>
+									<option value="Feedback">Feedback</option>
+									<option value="Other">Other</option>
+								</select>
+									<br />
+			<label for="Information">Additional Information:</label> <textarea name="additionalInformation"></textarea>
+										<br />
+			<label for="table">Have you been to the restaurant?</label> <br /><table>
+													<tr>
+												<th><input type="radio" name="No" value="No" checked /> No <br /></th>
+												<th><input type="radio" name="Yes" value="Yes" />Yes <br /></th>
+													</tr>
+													</table>
+			<label for="contact">Best days to contact you:</label> <table>
+										<tr>
+										<th><input type="checkbox" name="Monday" value="M"/>M<br /></th>
+										<th><input type="checkbox" name="Tuesday" value="T"/>T<br /></th>
+										<th><input type="checkbox" name="Wednesday" value="W"/>W <br /></th>
+										<th><input type="checkbox" name="Thursday" value="TR"/> TR <br /></th>
+										<th><input type="checkbox" name="Friday" value="F" /> F <br /></th>
+										</tr>
+										</table>
+			<button class="btn btn-primary" type="submit">Send Request</button>
+			<br />
+			 						
+				
+		</form>	
+		
+		</div>
+			<hr />
+			
+		<footer>
+			<p> 200 Maple St, Denton, TX, 76201</p>
+			<p> 924-335-9744 </p>
+		</footer>	
+		</main>
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+		crossorigin="anonymous"></script>	
+	</body>
+</html>	
