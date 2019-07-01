@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Play</title>
+	
+	<style>
+	
+	h1 {
+		font-size: 8em;
+		text-align: center;
+		}
+	th {
+		text-align: left;
+		}
+		
+	
+		
+		
+	</style>
+</head>
+<body onload="hideResults()">	
+		<h1>Lucky Sevens</h1>	
+		
+	<div>
+	<form id="startForm" onsubmit="return playGame()">
+	<label for="startingBet">Starting Bet:</label>
+		<input id="startingBetInput" type="number" 
+		placeholder="$0.00"/>
+	<br />
+	<button id="playButton" onclick="playGame(); return false;">Play</button>
+	<hr />
+	</form>
+	</div>
+	
+	<div id="gameResults">
+	
+	<table>
+		<th colspan="2" style="text-align: center;">Results</th>
+		<tr>
+			<th>Starting Bet</th>
+			<th id="resultsStartingBet">$</th>
+		</tr>
+		<tr>
+			<td>Total Rolls Before Going Broke</td>
+			<td id="resultsTotalRolls"></td>
+		</tr>
+		<tr>
+			<td>Highest Amount Won</td>
+			<td id="resultsHighestAmount">$</td>
+		</tr>
+		<tr>
+			<td>Roll Count at Highest Amount Won</td>
+			<td id="resultsRollsAtHighest"></td>
+		</tr>
+	</table>
+	</div>	
+	
+	
+
+	
+	
+
+
+ <script type="text/javascript" src="luckysevens.js">
+
+
+ </script>
+
+
+
+
+
+
+
+
+
+	
+	
+</body>
+</html>
